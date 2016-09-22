@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "findwarehouse", "findwarehouse\findwarehouse.csproj", "{ECF6F15E-9C31-4379-A423-C9750CD3CB0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Findwarehouse", "findwarehouse\Findwarehouse.csproj", "{ECF6F15E-9C31-4379-A423-C9750CD3CB0E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

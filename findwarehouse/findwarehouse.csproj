@@ -62,13 +62,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controller\Confirm\CategoryBannerConfirmController.cs" />
-    <Compile Include="controller\Confirm\BannerAdvertisingConfirmController.cs" />
-    <Compile Include="controller\Confirm\AdvertisingCustConfirmController.cs" />
-    <Compile Include="controller\Confirm\WarehouseInfoConfirmController.cs" />
-    <Compile Include="controller\Confirm\WarehouseMemberConfirmController.cs" />
-    <Compile Include="controller\IndustrialController.cs" />
-    <Compile Include="controller\SubFormController.cs" />
+    <Compile Include="Controller\Confirm\CategoryBannerConfirmController.cs" />
+    <Compile Include="Controller\Confirm\BannerAdvertisingConfirmController.cs" />
+    <Compile Include="Controller\Confirm\AdvertisingCustConfirmController.cs" />
+    <Compile Include="Controller\Confirm\WarehouseInfoConfirmController.cs" />
+    <Compile Include="Controller\Confirm\WarehouseMemberConfirmController.cs" />
+    <Compile Include="Controller\IndustrialController.cs" />
+    <Compile Include="Controller\SubFormController.cs" />
     <Compile Include="Database\Connector.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -76,62 +76,62 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="models\Confirm\CategoryBannerConfirmModel.cs" />
-    <Compile Include="models\Confirm\BannerAdvertisingConfirmModel.cs" />
-    <Compile Include="models\IModel.cs" />
-    <Compile Include="models\Confirm\WarehouseInfoConfirmModel.cs" />
-    <Compile Include="models\Confirm\AdvertisingCustConfirmModel.cs" />
-    <Compile Include="models\Confirm\WarehouseMemberConfirmModel.cs" />
-    <Compile Include="models\IndustrialModel.cs" />
-    <Compile Include="models\ProvinceModel.cs" />
+    <Compile Include="Models\Confirm\CategoryBannerConfirmModel.cs" />
+    <Compile Include="Models\Confirm\BannerAdvertisingConfirmModel.cs" />
+    <Compile Include="Models\IModel.cs" />
+    <Compile Include="Models\Confirm\WarehouseInfoConfirmModel.cs" />
+    <Compile Include="Models\Confirm\AdvertisingCustConfirmModel.cs" />
+    <Compile Include="Models\Confirm\WarehouseMemberConfirmModel.cs" />
+    <Compile Include="Models\IndustrialModel.cs" />
+    <Compile Include="Models\ProvinceModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="views\Confirm\AdvertisingCustConfirmForm.cs">
+    <Compile Include="Views\Confirm\AdvertisingCustConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Confirm\AdvertisingCustConfirmForm.Designer.cs">
+    <Compile Include="Views\Confirm\AdvertisingCustConfirmForm.Designer.cs">
       <DependentUpon>AdvertisingCustConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Confirm\CategoryBannerConfirmForm.cs">
+    <Compile Include="Views\Confirm\CategoryBannerConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Confirm\CategoryBannerConfirmForm.Designer.cs">
+    <Compile Include="Views\Confirm\CategoryBannerConfirmForm.Designer.cs">
       <DependentUpon>CategoryBannerConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Confirm\WarehouseInfoConfirmForm.cs">
+    <Compile Include="Views\Confirm\WarehouseInfoConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Confirm\WarehouseInfoConfirmForm.Designer.cs">
+    <Compile Include="Views\Confirm\WarehouseInfoConfirmForm.Designer.cs">
       <DependentUpon>WarehouseInfoConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Confirm\BannerAdvertisingConfirmForm.cs">
+    <Compile Include="Views\Confirm\BannerAdvertisingConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Confirm\BannerAdvertisingConfirmForm.Designer.cs">
+    <Compile Include="Views\Confirm\BannerAdvertisingConfirmForm.Designer.cs">
       <DependentUpon>BannerAdvertisingConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Confirm\WarehouseMemberConfirmForm.cs">
+    <Compile Include="Views\Confirm\WarehouseMemberConfirmForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Confirm\WarehouseMemberConfirmForm.Designer.cs">
+    <Compile Include="Views\Confirm\WarehouseMemberConfirmForm.Designer.cs">
       <DependentUpon>WarehouseMemberConfirmForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Master\Industrial\AddEditIndustrial.cs">
+    <Compile Include="Views\Master\Industrial\AddEditIndustrial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Master\Industrial\AddEditIndustrial.Designer.cs">
+    <Compile Include="Views\Master\Industrial\AddEditIndustrial.Designer.cs">
       <DependentUpon>AddEditIndustrial.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Master\Industrial\IndustrialForm.cs">
+    <Compile Include="Views\Master\Industrial\IndustrialForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Master\Industrial\IndustrialForm.Designer.cs">
+    <Compile Include="Views\Master\Industrial\IndustrialForm.Designer.cs">
       <DependentUpon>IndustrialForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\Master\WarehouseMember\WarehouseMemberForm.cs">
+    <Compile Include="Views\Master\WarehouseMember\WarehouseMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\Master\WarehouseMember\WarehouseMemberForm.Designer.cs">
+    <Compile Include="Views\Master\WarehouseMember\WarehouseMemberForm.Designer.cs">
       <DependentUpon>WarehouseMemberForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
@@ -147,28 +147,28 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="views\Confirm\AdvertisingCustConfirmForm.resx">
+    <EmbeddedResource Include="Views\Confirm\AdvertisingCustConfirmForm.resx">
       <DependentUpon>AdvertisingCustConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Confirm\CategoryBannerConfirmForm.resx">
+    <EmbeddedResource Include="Views\Confirm\CategoryBannerConfirmForm.resx">
       <DependentUpon>CategoryBannerConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Confirm\WarehouseInfoConfirmForm.resx">
+    <EmbeddedResource Include="Views\Confirm\WarehouseInfoConfirmForm.resx">
       <DependentUpon>WarehouseInfoConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Confirm\BannerAdvertisingConfirmForm.resx">
+    <EmbeddedResource Include="Views\Confirm\BannerAdvertisingConfirmForm.resx">
       <DependentUpon>BannerAdvertisingConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Confirm\WarehouseMemberConfirmForm.resx">
+    <EmbeddedResource Include="Views\Confirm\WarehouseMemberConfirmForm.resx">
       <DependentUpon>WarehouseMemberConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Master\Industrial\AddEditIndustrial.resx">
+    <EmbeddedResource Include="Views\Master\Industrial\AddEditIndustrial.resx">
       <DependentUpon>AddEditIndustrial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Master\Industrial\IndustrialForm.resx">
+    <EmbeddedResource Include="Views\Master\Industrial\IndustrialForm.resx">
       <DependentUpon>IndustrialForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\Master\WarehouseMember\WarehouseMemberForm.resx">
+    <EmbeddedResource Include="Views\Master\WarehouseMember\WarehouseMemberForm.resx">
       <DependentUpon>WarehouseMemberForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
