@@ -68,6 +68,7 @@
     <Compile Include="Controller\Confirm\WarehouseInfoConfirmController.cs" />
     <Compile Include="Controller\Confirm\WarehouseMemberConfirmController.cs" />
     <Compile Include="Controller\IndustrialController.cs" />
+    <Compile Include="Controller\PremiumBannerController.cs" />
     <Compile Include="Controller\SubFormController.cs" />
     <Compile Include="Database\Connector.cs" />
     <Compile Include="MainForm.cs">
@@ -83,6 +84,7 @@
     <Compile Include="Models\Confirm\AdvertisingCustConfirmModel.cs" />
     <Compile Include="Models\Confirm\WarehouseMemberConfirmModel.cs" />
     <Compile Include="Models\IndustrialModel.cs" />
+    <Compile Include="Models\PremiumBannerModel.cs" />
     <Compile Include="Models\ProvinceModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +130,18 @@
     <Compile Include="Views\Master\Industrial\IndustrialForm.Designer.cs">
       <DependentUpon>IndustrialForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Master\PremiumBanner\AddPremiumBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\PremiumBanner\AddPremiumBanner.Designer.cs">
+      <DependentUpon>AddPremiumBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\PremiumBanner\PremiumBannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\PremiumBanner\PremiumBannerForm.Designer.cs">
+      <DependentUpon>PremiumBannerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Master\WarehouseMember\WarehouseMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +182,12 @@
     <EmbeddedResource Include="Views\Master\Industrial\IndustrialForm.resx">
       <DependentUpon>IndustrialForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\PremiumBanner\AddPremiumBanner.resx">
+      <DependentUpon>AddPremiumBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\PremiumBanner\PremiumBannerForm.resx">
+      <DependentUpon>PremiumBannerForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Master\WarehouseMember\WarehouseMemberForm.resx">
       <DependentUpon>WarehouseMemberForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,7 +209,10 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Images\2016-09-26_9-00-44.png" />
+    <None Include="Images\logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,5 +1,6 @@
 ﻿using findwarehouse.controller;
 using findwarehouse.views;
+using findwarehouse.views.Master.PremiumBanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,6 +62,11 @@ namespace findwarehouse
         private void lbCallCategoryBannerConfirm_Click(object sender, EventArgs e)
         {
             SubFormController.setForm(panelSubForm, new CategoryBannerConfirmForm());
+        }
+
+        private void lbCallPremiumBanner_Click(object sender, EventArgs e)
+        {
+            SubFormController.setForm(panelSubForm, new PremiumBannerForm());
         }
     }
 }

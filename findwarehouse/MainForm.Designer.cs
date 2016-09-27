@@ -31,6 +31,7 @@
             this.imgBoxLogo = new System.Windows.Forms.PictureBox();
             this.lbTitle = new System.Windows.Forms.Label();
             this.groupMaster = new System.Windows.Forms.GroupBox();
+            this.lbCallPremiumBanner = new System.Windows.Forms.Label();
             this.lbCallWarehouseMember = new System.Windows.Forms.Label();
             this.lbCallIndustrial = new System.Windows.Forms.Label();
             this.panelSubForm = new System.Windows.Forms.Panel();
@@ -48,18 +49,23 @@
             // imgBoxLogo
             // 
             this.imgBoxLogo.BackColor = System.Drawing.Color.White;
-            this.imgBoxLogo.Location = new System.Drawing.Point(12, 12);
+            this.imgBoxLogo.Image = global::findwarehouse.Properties.Resources.logo;
+            this.imgBoxLogo.InitialImage = null;
+            this.imgBoxLogo.Location = new System.Drawing.Point(20, -21);
             this.imgBoxLogo.Name = "imgBoxLogo";
-            this.imgBoxLogo.Size = new System.Drawing.Size(240, 100);
+            this.imgBoxLogo.Size = new System.Drawing.Size(220, 161);
+            this.imgBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgBoxLogo.TabIndex = 0;
             this.imgBoxLogo.TabStop = false;
+            this.imgBoxLogo.WaitOnLoad = true;
             // 
             // lbTitle
             // 
             this.lbTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.lbTitle.Location = new System.Drawing.Point(258, 12);
+            this.lbTitle.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbTitle.Location = new System.Drawing.Point(258, 5);
             this.lbTitle.Name = "lbTitle";
             this.lbTitle.Size = new System.Drawing.Size(994, 100);
             this.lbTitle.TabIndex = 0;
@@ -70,15 +76,29 @@
             // 
             this.groupMaster.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupMaster.Controls.Add(this.lbCallPremiumBanner);
             this.groupMaster.Controls.Add(this.lbCallWarehouseMember);
             this.groupMaster.Controls.Add(this.lbCallIndustrial);
             this.groupMaster.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupMaster.Location = new System.Drawing.Point(3, 118);
+            this.groupMaster.Location = new System.Drawing.Point(3, 116);
             this.groupMaster.Name = "groupMaster";
-            this.groupMaster.Size = new System.Drawing.Size(249, 314);
+            this.groupMaster.Size = new System.Drawing.Size(249, 316);
             this.groupMaster.TabIndex = 2;
             this.groupMaster.TabStop = false;
             this.groupMaster.Text = "Master";
+            // 
+            // lbCallPremiumBanner
+            // 
+            this.lbCallPremiumBanner.AutoSize = true;
+            this.lbCallPremiumBanner.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbCallPremiumBanner.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.lbCallPremiumBanner.Location = new System.Drawing.Point(23, 181);
+            this.lbCallPremiumBanner.Name = "lbCallPremiumBanner";
+            this.lbCallPremiumBanner.Size = new System.Drawing.Size(133, 18);
+            this.lbCallPremiumBanner.TabIndex = 1;
+            this.lbCallPremiumBanner.Text = "Premium Banner";
+            this.lbCallPremiumBanner.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCallPremiumBanner.Click += new System.EventHandler(this.lbCallPremiumBanner_Click);
             // 
             // lbCallWarehouseMember
             // 
@@ -204,6 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panelSubForm);
@@ -221,6 +242,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,5 +260,6 @@
         private System.Windows.Forms.Label lbCallAdvertisingCustConfirm;
         private System.Windows.Forms.Label lbCallWarehouseInfoConfirm;
         private System.Windows.Forms.Label lbCallWarehouseMemberConfirm;
+        private System.Windows.Forms.Label lbCallPremiumBanner;
     }
 }

@@ -22,5 +22,14 @@ namespace findwarehouse.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("D:\\SSC\\findwarehouse\\findwarehouse\\Images\\")]
+        public string ImagePath {
+            get {
+                return ((string)(this["ImagePath"]));
+            }
+        }
     }
 }

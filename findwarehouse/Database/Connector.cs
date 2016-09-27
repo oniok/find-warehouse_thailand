@@ -19,22 +19,22 @@ namespace findwarehouse.Database
     {
         private static Connector Instance = null; //Connector Must have only one Instance in application this is Singleton object Design.
         //For development
-        //private MySqlConnection mySqlConnect { set; get; } // mysql database connector
-        //private const String _HOST = "192.168.1.106";//"192.168.1.5"; //host address
-        //private const String _USER = "dev"; // username database
-        //private const String _PWD = "12345"; // password database 
-        //private const String _DATABASE = "find-warehouse_thailand"; //database name
-        //private const String _SYS_SECURE_INFO = "true"; //system security setting;
-        //private const String _CHARSET = "utf8"; //charset in database for show
-
-        //For testing
         private MySqlConnection mySqlConnect { set; get; } // mysql database connector
-        private const String _HOST = "ocean.oniok.com";//"192.168.1.5"; //host address
-        private const String _USER = "find-warehouse"; // username database
-        private const String _PWD = "47fyi-xatv"; // password database 
+        private const String _HOST = "192.168.1.105";//"192.168.1.5"; //host address
+        private const String _USER = "dev"; // username database
+        private const String _PWD = "12345"; // password database 
         private const String _DATABASE = "find-warehouse_thailand"; //database name
         private const String _SYS_SECURE_INFO = "true"; //system security setting;
         private const String _CHARSET = "utf8"; //charset in database for show
+
+        //For testing
+        //private MySqlConnection mySqlConnect { set; get; } // mysql database connector
+        //private const String _HOST = "ocean.oniok.com";//"192.168.1.5"; //host address
+        //private const String _USER = "find-warehouse"; // username database
+        //private const String _PWD = "47fyi-xatv"; // password database 
+        //private const String _DATABASE = "find-warehouse_thailand"; //database name
+        //private const String _SYS_SECURE_INFO = "true"; //system security setting;
+        //private const String _CHARSET = "utf8"; //charset in database for show
 
         public Connector()
         {
