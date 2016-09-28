@@ -24,35 +24,79 @@ namespace findwarehouse.views
 
         private void IndustrialForm_Load(object sender, EventArgs e)
         {
+
+            SetEditColumnIntoDataGrid();// Insert Edeit column into datagridview
             dataGridIndustrial.AutoGenerateColumns = true; // create gridview as auto generate columns.
             IndustrialController.GetData(dataGridIndustrial); // call data industrial into grid.
-            dataGridIndustrial.Rows[0].Selected = true;
+            dataGridIndustrial.SelectedRows[0].Selected = true;
+            dataGridIndustrial.AutoResizeColumns();//Auto resize columns
         }
 
         private void btnAddForm_Click(object sender, EventArgs e)
         {
             IndustrialController.CallAddEditForm(new AddEditIndustrial()); // call form as add data form.
+            ReloadDataGridView(); // Reload data in datagridview
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if(selectedIndustrial != null)
                 IndustrialController.CallAddEditForm(new AddEditIndustrial(selectedIndustrial)); // call form as edit data form.
+            ReloadDataGridView(); // Reload data in datagridview
         }
 
         private void dataGridIndustrial_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedIndustrial = new IndustrialModel();
-            foreach (DataGridViewRow rows in dataGridIndustrial.SelectedRows)
+
+            setIndustrialModel(dataGridIndustrial.SelectedRows[0]);
+            if (e.ColumnIndex == 0 && e.RowIndex >= 0)
             {
-                selectedIndustrial.Code = rows.Cells[0].Value.ToString(); //get code cell
-                selectedIndustrial.Province = rows.Cells[1].Value.ToString();//get province cell
-                selectedIndustrial.NameEn = rows.Cells[2].Value.ToString(); //get name eng cell
-                selectedIndustrial.NameTh = rows.Cells[3].Value.ToString(); //get name thai cell
-                selectedIndustrial.NameJp = rows.Cells[4].Value.ToString(); //get name jp cell
-                selectedIndustrial.Sequence = Int16.Parse(rows.Cells[5].Value.ToString()); //get sequence number
-                selectedIndustrial.SearchKey = rows.Cells[6].Value.ToString(); //get search key cell
+                IndustrialController.CallAddEditForm(new AddEditIndustrial(selectedIndustrial)); // call form as edit data form.
+                ReloadDataGridView(); // Reload data in datagridview
             }
+
+        }
+
+        private void dataGridIndustrial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        // Method for setup premiumbannermodel value
+        private void setIndustrialModel(DataGridViewRow selectedRows)
+        {
+            selectedIndustrial.Code = selectedRows.Cells[1].Value.ToString(); // set province id
+            selectedIndustrial.Province = selectedRows.Cells[2].Value.ToString(); //set file name
+            selectedIndustrial.NameEn = selectedRows.Cells[3].Value.ToString(); // set thai name
+            selectedIndustrial.NameTh = selectedRows.Cells[4].Value.ToString(); //set active date
+            selectedIndustrial.NameJp = selectedRows.Cells[5].Value.ToString(); // set inactive date
+            selectedIndustrial.Sequence = Int16.Parse(selectedRows.Cells[6].Value.ToString()); //set active date
+            selectedIndustrial.SearchKey = selectedRows.Cells[7].Value.ToString(); // set inactive date
+
+        }
+
+        // Set Edit Column to Data Grid
+        private void SetEditColumnIntoDataGrid()
+        {
+            // Set Column properties
+            DataGridViewButtonColumn editColumn = new DataGridViewButtonColumn();
+            editColumn.Frozen = true;
+            editColumn.HeaderText = "";
+            editColumn.Name = "Edit";
+            editColumn.Text = "Edit";
+            editColumn.ReadOnly = true;
+            editColumn.Resizable = DataGridViewTriState.False;
+            editColumn.Width = 30;
+            editColumn.UseColumnTextForButtonValue = true;
+            // Add editColumn into datagridview
+            dataGridIndustrial.Columns.Add(editColumn);
+        }
+
+        // Reload data When Add/Edit form was closed
+        public void ReloadDataGridView()
+        {
+            IndustrialController.GetData(dataGridIndustrial); // call data industrial into grid.
         }
     }
 }

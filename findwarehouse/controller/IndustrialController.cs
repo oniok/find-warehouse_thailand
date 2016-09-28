@@ -30,7 +30,7 @@ namespace findwarehouse.controller
         /** Call Add or Edit Industrial Form **/
         public static void CallAddEditForm(Form IndustrialAddEditForm)
         {
-            IndustrialAddEditForm.Show();// show dialog.
+            IndustrialAddEditForm.ShowDialog();// show dialog.
         }
         /** set province data member into combobox **/
         public static void SetProvinceBox(ComboBox comboProvince)

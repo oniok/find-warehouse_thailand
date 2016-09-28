@@ -1,6 +1,11 @@
 ﻿using findwarehouse.controller;
 using findwarehouse.views;
+using findwarehouse.views.Master.BannerAdvertising;
+using findwarehouse.views.Master.CustomerAdvertising;
 using findwarehouse.views.Master.PremiumBanner;
+using findwarehouse.views.Master.WarehouseImage;
+using findwarehouse.views.Master.WarehouseInformation;
+using findwarehouse.views.Master.YouTubeBanner;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -67,6 +72,31 @@ namespace findwarehouse
         private void lbCallPremiumBanner_Click(object sender, EventArgs e)
         {
             SubFormController.setForm(panelSubForm, new PremiumBannerForm());
+        }
+
+        private void lbCustomerAdvertising_Click(object sender, EventArgs e)
+        {
+            SubFormController.setForm(panelSubForm, new CustomerAdvertising());
+        }
+
+        private void lbWarehouseInformation_Click(object sender, EventArgs e)
+        {
+            SubFormController.setForm(panelSubForm, new WarehouseInformationForm());
+        }
+
+        private void lbWarehouseImage_Click(object sender, EventArgs e)
+        {
+            SubFormController.setForm(panelSubForm, new WarehouseImageForm());
+        }
+
+        private void lbYoutube_Click(object sender, EventArgs e)
+        {
+            SubFormController.setForm(panelSubForm, new YouTubeBannerForm());
+        }
+
+        private void lbBannerAdvertising_Click(object sender, EventArgs e)
+        {
+            SubFormController.setForm(panelSubForm, new BannerAdvertisingForm());
         }
     }
 }

@@ -36,13 +36,13 @@
             this.lbImagePath = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.txtBannerURL = new System.Windows.Forms.TextBox();
-            this.imgPreview = new System.Windows.Forms.PictureBox();
             this.lbAdvertisingImage = new System.Windows.Forms.Label();
             this.lbMemcode = new System.Windows.Forms.Label();
             this.comboMemCode = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.imgBrowse = new System.Windows.Forms.OpenFileDialog();
+            this.imgPreview = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).BeginInit();
             this.SuspendLayout();
@@ -139,18 +139,6 @@
             this.txtBannerURL.Size = new System.Drawing.Size(304, 29);
             this.txtBannerURL.TabIndex = 4;
             // 
-            // imgPreview
-            // 
-            this.imgPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.imgPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imgPreview.ImageLocation = "";
-            this.imgPreview.Location = new System.Drawing.Point(218, 104);
-            this.imgPreview.Name = "imgPreview";
-            this.imgPreview.Size = new System.Drawing.Size(304, 231);
-            this.imgPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgPreview.TabIndex = 3;
-            this.imgPreview.TabStop = false;
-            // 
             // lbAdvertisingImage
             // 
             this.lbAdvertisingImage.AutoSize = true;
@@ -215,6 +203,20 @@
             this.imgBrowse.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png, *.bmp) | *.jpg; *.jpeg; *.jpe; " +
     "*.jfif; *.png; *.bmp";
             this.imgBrowse.FileOk += new System.ComponentModel.CancelEventHandler(this.imgBrowse_FileOk);
+            // 
+            // imgPreview
+            // 
+            this.imgPreview.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgPreview.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imgPreview.Image = global::findwarehouse.Properties.Resources.No_Cover;
+            this.imgPreview.ImageLocation = "";
+            this.imgPreview.InitialImage = null;
+            this.imgPreview.Location = new System.Drawing.Point(218, 104);
+            this.imgPreview.Name = "imgPreview";
+            this.imgPreview.Size = new System.Drawing.Size(304, 231);
+            this.imgPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPreview.TabIndex = 3;
+            this.imgPreview.TabStop = false;
             // 
             // AddPremiumBanner
             // 

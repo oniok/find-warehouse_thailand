@@ -16,13 +16,13 @@ namespace findwarehouse.models
         public String NameEn { set; get; } // Name English
         public String NameTh { set; get; } // Name Thai
         public String NameJp { set; get; } // Name Japan
-        public Int16 Sequence { set; get; } // Sequence Number 
+        public Int16  Sequence { set; get; } // Sequence Number 
         public String SearchKey { set; get; } // Search Key
 
         /** Data Entity Class **/
         public static class ENTITY
         {
-            public const String CODE = "INDUSTRIAL_CODE"; 
+            public const String CODE = "INDUSTRIAL_CODE";
             public const String PROVINCE = "PROVINCE_CODE";
             public const String NAME_EN = "NAME_ENG";
             public const String NAME_TH = "NAME_THA";
@@ -46,7 +46,7 @@ namespace findwarehouse.models
          * @Param IndustrialModel as model
          * @return Result as bool
          */
-         public static bool insertIndustrial(IndustrialModel model)
+        public static bool insertIndustrial(IndustrialModel model)
         {
             Connector connector = Connector.getInstance(); // connect database object
             Dictionary<String, Object> parameter = new Dictionary<string, object>(); //new parameter object
@@ -64,7 +64,7 @@ namespace findwarehouse.models
         {
             Connector connector = Connector.getInstance(); // connect database object
             Dictionary<String, Object> parameter = new Dictionary<string, object>(); //new parameter object
-            parameter.Add("industrialCode", (Object) model.Code);
+            parameter.Add("industrialCode", (Object)model.Code);
             parameter.Add("provinceCode", (Object)model.Province); // add parameter province
             parameter.Add("nameEn", (Object)model.NameEn); // add parameter name english 
             parameter.Add("nameTh", (Object)model.NameTh); // add parameter name Thai
@@ -76,5 +76,10 @@ namespace findwarehouse.models
             return false; // return false when cannot execute command.
         }
 
+        public static System.Data.DataTable getIndustrialList()
+        {
+            Connector connector = Connector.getInstance();// connect database object
+            return connector.GetData(connector.CreateCommand("ssc_warehouse_get_industrial_all"));//get data from database
+        }
     }
 }

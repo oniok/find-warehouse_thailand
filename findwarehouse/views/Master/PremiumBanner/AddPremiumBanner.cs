@@ -50,31 +50,37 @@ namespace findwarehouse.views.Master.PremiumBanner
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (model == null) // add Industrial mode
+            try
             {
-                model = new models.PremiumBannerModel(); //new model to assign data
-                model.memberCode = comboMemCode.Text;// set province id
-                model.adImg = imgBrowse.FileName != "imgBrowse" ? imgBrowse.SafeFileName : ""; //set file name
-                model.adPath = txtBannerURL.Text.Trim(); // set thai name
-                model.activeDate = dtpActivedate.Value.ToString("yyyy-MM-dd");//set active date
-                model.InActiveDate = dtpActivedate.Value.ToString("yyyy-MM-dd"); // set inactive date
-                PremiumBannerController.InsertData(model); // call update method
-                model = null;
+                if (model == null) // add Industrial mode
+                {
+                    model = new models.PremiumBannerModel(); //new model to assign data
+                    model.memberCode = comboMemCode.Text;// set province id
+                    model.adImg = imgBrowse.FileName != "imgBrowse" ? imgBrowse.SafeFileName : ""; //set file name
+                    model.adPath = txtBannerURL.Text.Trim(); // set thai name
+                    model.activeDate = dtpActivedate.Value.ToString("yyyy-MM-dd");//set active date
+                    model.InActiveDate = dtpActivedate.Value.ToString("yyyy-MM-dd"); // set inactive date
+                    PremiumBannerController.InsertData(model); // call update method
+                    model = null;
+                }
+                else // update (edit) Industrial mode
+                {
+                    model.memberCode = comboMemCode.SelectedValue.ToString(); // set province id
+                    model.adImg = imgBrowse.FileName != "imgBrowse" ? imgBrowse.SafeFileName : model.adImg; //set file name
+                    model.adPath = txtBannerURL.Text.Trim(); // set thai name
+                    model.activeDate = dtpActivedate.Value.ToString("yyyy-MM-dd");//set active date
+                    model.InActiveDate = dtpActivedate.Value.ToString("yyyy-MM-dd"); // set inactive date
+                    PremiumBannerController.UpdateData(model);
+                }
+                if (imgBrowse.FileName != "imgBrowse") // Check if picture has selected
+                {
+                    // Copy file to image folder in this project
+                    System.IO.File.Copy(imgBrowse.FileName, Properties.Settings.Default.ImagePath + imgBrowse.SafeFileName, true);
+                }   
             }
-            else // update (edit) Industrial mode
+            finally
             {
-                model.memberCode = comboMemCode.SelectedValue.ToString(); // set province id
-                model.adImg = imgBrowse.FileName != "imgBrowse" ? imgBrowse.SafeFileName : model.adImg; //set file name
-                model.adPath = txtBannerURL.Text.Trim(); // set thai name
-                model.activeDate = dtpActivedate.Value.ToString("yyyy-MM-dd");//set active date
-                model.InActiveDate = dtpActivedate.Value.ToString("yyyy-MM-dd"); // set inactive date
-                PremiumBannerController.UpdateData(model);
-            }
-            if (imgBrowse.FileName != "imgBrowse") // Check if picture has selected
-            {
-                // Copy file to image folder in this project
-                //System.IO.File.Copy(imgBrowse.FileName, Properties.Settings.Default.ImagePath + imgBrowse.SafeFileName, true);
-                System.IO.File.Copy(imgBrowse.FileName, "D:\\SSC\\Find WareHouse Thailand_wasan\\findwarehouse\\findwarehouse\\Images\\" + imgBrowse.SafeFileName, true);
+                this.Close();
             }
         }
 

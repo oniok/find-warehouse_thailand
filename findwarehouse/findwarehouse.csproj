@@ -62,14 +62,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\BannerAdvertisingController.cs" />
     <Compile Include="Controller\Confirm\CategoryBannerConfirmController.cs" />
     <Compile Include="Controller\Confirm\BannerAdvertisingConfirmController.cs" />
     <Compile Include="Controller\Confirm\AdvertisingCustConfirmController.cs" />
     <Compile Include="Controller\Confirm\WarehouseInfoConfirmController.cs" />
     <Compile Include="Controller\Confirm\WarehouseMemberConfirmController.cs" />
+    <Compile Include="Controller\CustomerAdvertisingController.cs" />
     <Compile Include="Controller\IndustrialController.cs" />
     <Compile Include="Controller\PremiumBannerController.cs" />
+    <Compile Include="Controller\RightBannerController.cs" />
     <Compile Include="Controller\SubFormController.cs" />
+    <Compile Include="Controller\WarehouseImageController.cs" />
+    <Compile Include="Controller\WarehouseInformationController.cs" />
+    <Compile Include="Controller\WarehouseMemberController.cs" />
+    <Compile Include="Controller\YouTubeBannerController.cs" />
     <Compile Include="Database\Connector.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -77,8 +84,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\BannerAdvertisingModel.cs" />
+    <Compile Include="Models\categorytype.cs" />
     <Compile Include="Models\Confirm\CategoryBannerConfirmModel.cs" />
     <Compile Include="Models\Confirm\BannerAdvertisingConfirmModel.cs" />
+    <Compile Include="Models\CustomerAdvertisingModel.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Confirm\WarehouseInfoConfirmModel.cs" />
     <Compile Include="Models\Confirm\AdvertisingCustConfirmModel.cs" />
@@ -86,6 +96,12 @@
     <Compile Include="Models\IndustrialModel.cs" />
     <Compile Include="Models\PremiumBannerModel.cs" />
     <Compile Include="Models\ProvinceModel.cs" />
+    <Compile Include="Models\RightBannerModel.cs" />
+    <Compile Include="Models\WarehouseImageModel.cs" />
+    <Compile Include="Models\WarehouseInformationModel.cs" />
+    <Compile Include="Models\WarehousememberModel.cs" />
+    <Compile Include="Models\WarehouseUsageTypeModel.cs" />
+    <Compile Include="Models\YouTubeBannerModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\Confirm\AdvertisingCustConfirmForm.cs">
@@ -118,6 +134,42 @@
     <Compile Include="Views\Confirm\WarehouseMemberConfirmForm.Designer.cs">
       <DependentUpon>WarehouseMemberConfirmForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Master\BannerAdvertising\AddBannerAdvertising.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\BannerAdvertising\AddBannerAdvertising.Designer.cs">
+      <DependentUpon>AddBannerAdvertising.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\BannerAdvertising\BannerAdvertisingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\BannerAdvertising\BannerAdvertisingForm.Designer.cs">
+      <DependentUpon>BannerAdvertisingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\CategoryMaster\AddCategoryMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\CategoryMaster\AddCategoryMaster.Designer.cs">
+      <DependentUpon>AddCategoryMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\CategoryMaster\CategoryMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\CategoryMaster\CategoryMasterForm.Designer.cs">
+      <DependentUpon>CategoryMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\CustomerAdvertising\AddCustomerAdvertising.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\CustomerAdvertising\AddCustomerAdvertising.Designer.cs">
+      <DependentUpon>AddCustomerAdvertising.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\CustomerAdvertising\CustomerAdvertising.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\CustomerAdvertising\CustomerAdvertising.Designer.cs">
+      <DependentUpon>CustomerAdvertising.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Master\Industrial\AddEditIndustrial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +194,65 @@
     <Compile Include="Views\Master\PremiumBanner\PremiumBannerForm.Designer.cs">
       <DependentUpon>PremiumBannerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Master\RightBanner\AddRightBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\RightBanner\AddRightBanner.Designer.cs">
+      <DependentUpon>AddRightBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\RightBanner\RightBannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\RightBanner\RightBannerForm.Designer.cs">
+      <DependentUpon>RightBannerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseImage\AddWarehouseImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseImage\AddWarehouseImage.Designer.cs">
+      <DependentUpon>AddWarehouseImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseImage\WarehouseImageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseImage\WarehouseImageForm.Designer.cs">
+      <DependentUpon>WarehouseImageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseInformation\AddWarehouseInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseInformation\AddWarehouseInformation.Designer.cs">
+      <DependentUpon>AddWarehouseInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseInformation\WarehouseInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseInformation\WarehouseInformationForm.Designer.cs">
+      <DependentUpon>WarehouseInformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseMember\AddWarehouseMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\WarehouseMember\AddWarehouseMemberForm.Designer.cs">
+      <DependentUpon>AddWarehouseMemberForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Master\WarehouseMember\WarehouseMemberForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Master\WarehouseMember\WarehouseMemberForm.Designer.cs">
       <DependentUpon>WarehouseMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\YouTubeBanner\AddYouTubeBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\YouTubeBanner\AddYouTubeBanner.Designer.cs">
+      <DependentUpon>AddYouTubeBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Master\YouTubeBanner\YouTubeBannerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Master\YouTubeBanner\YouTubeBannerForm.Designer.cs">
+      <DependentUpon>YouTubeBannerForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -176,6 +282,24 @@
     <EmbeddedResource Include="Views\Confirm\WarehouseMemberConfirmForm.resx">
       <DependentUpon>WarehouseMemberConfirmForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\BannerAdvertising\AddBannerAdvertising.resx">
+      <DependentUpon>AddBannerAdvertising.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\BannerAdvertising\BannerAdvertisingForm.resx">
+      <DependentUpon>BannerAdvertisingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\CategoryMaster\AddCategoryMaster.resx">
+      <DependentUpon>AddCategoryMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\CategoryMaster\CategoryMasterForm.resx">
+      <DependentUpon>CategoryMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\CustomerAdvertising\AddCustomerAdvertising.resx">
+      <DependentUpon>AddCustomerAdvertising.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\CustomerAdvertising\CustomerAdvertising.resx">
+      <DependentUpon>CustomerAdvertising.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Master\Industrial\AddEditIndustrial.resx">
       <DependentUpon>AddEditIndustrial.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,8 +312,35 @@
     <EmbeddedResource Include="Views\Master\PremiumBanner\PremiumBannerForm.resx">
       <DependentUpon>PremiumBannerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\RightBanner\AddRightBanner.resx">
+      <DependentUpon>AddRightBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\RightBanner\RightBannerForm.resx">
+      <DependentUpon>RightBannerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\WarehouseImage\AddWarehouseImage.resx">
+      <DependentUpon>AddWarehouseImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\WarehouseImage\WarehouseImageForm.resx">
+      <DependentUpon>WarehouseImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\WarehouseInformation\AddWarehouseInformation.resx">
+      <DependentUpon>AddWarehouseInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\WarehouseInformation\WarehouseInformationForm.resx">
+      <DependentUpon>WarehouseInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\WarehouseMember\AddWarehouseMemberForm.resx">
+      <DependentUpon>AddWarehouseMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Master\WarehouseMember\WarehouseMemberForm.resx">
       <DependentUpon>WarehouseMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\YouTubeBanner\AddYouTubeBanner.resx">
+      <DependentUpon>AddYouTubeBanner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Master\YouTubeBanner\YouTubeBannerForm.resx">
+      <DependentUpon>YouTubeBannerForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -211,6 +362,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\2016-09-26_9-00-44.png" />
+    <None Include="Images\No_Cover.jpg" />
     <None Include="Images\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

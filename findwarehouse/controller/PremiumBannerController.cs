@@ -17,6 +17,7 @@ namespace findwarehouse.controller
         public static void InsertData(models.PremiumBannerModel model)
         {
             //show message box when cannot insert data
+            
             MessageBox.Show((models.PremiumBannerModel.insertPremiumBanner(model)) ? "Insert Success" :
                 "Insert Failed, Please Check parameter or something");
 

@@ -38,7 +38,7 @@
             this.btnAddForm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddForm.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAddForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddForm.ForeColor = System.Drawing.Color.White;
             this.btnAddForm.Location = new System.Drawing.Point(831, 11);
             this.btnAddForm.Name = "btnAddForm";

@@ -51,7 +51,7 @@ namespace findwarehouse.views.Master.Industrial
                 model.NameTh = txtNameThai.Text.Trim(); // set thai name
                 model.NameJp = txtNameJapan.Text.Trim(); // set japan name
                 model.SearchKey = txtSearchName.Text.Trim(); // set search name
-                IndustrialController.UpdateData(model); // call update method
+                IndustrialController.InsertData(model); // call update method
                 
             }
             else // update (edit) Industrial mode
